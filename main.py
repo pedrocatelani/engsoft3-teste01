@@ -1,11 +1,12 @@
 from triangle.triangle import Triangle
 
 tri = Triangle()
+ctrl = 1
 
 #Autores: Tales, Pedro Catelani e Gustavo Souza
 #Ler 3 valores (A, B e C) representando as medidas dos lados
 
-lista_de_teste = [
+test_list = [
     (1, 2, 3),
     (3, 4, 5),
     (2, 2, 4),
@@ -13,5 +14,9 @@ lista_de_teste = [
     (5, 3, 3)
 ]
 
-check = tri.create_triangle(3, 4, 5)
-print(check)
+for test_case in test_list:
+    print(f'\n--Teste {ctrl}--')
+    check = tri.create_triangle(test_case[0],test_case[1],test_case[2])
+    print(check)
+    print(tri.triangle_type())
+    ctrl += 1
