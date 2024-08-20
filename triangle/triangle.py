@@ -4,6 +4,7 @@ class Triangle():
     c = None
     
     def create_triangle(self, a:int, b:int, c:int) -> str:
+        self.dismount_triangle()
         if a >= (b + c) or b >= (a + c) or c >= (a + b):
             return "É impossível formar um triangulo com esses valores"
         else:
@@ -22,3 +23,8 @@ class Triangle():
             return "Triangulo Isósceles "
         else:
             return "Triangulo Escaleno"
+        
+    def dismount_triangle(self):
+        self.a = None
+        self.b = None
+        self.c = None
