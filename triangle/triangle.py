@@ -28,3 +28,16 @@ class Triangle():
         self.a = None
         self.b = None
         self.c = None
+        
+    def perimeter(self) -> str:
+        if self.a:
+            return str(self.a + self.b + self.c)
+        else:
+            return 'Triangulo sem perimetro'
+    
+    def area(self) -> str:
+        if self.a:
+            p = int(self.perimeter())/2
+            return str((p*(p-self.a)*(p-self.b)*(p-self.c))**0.5)
+        else:
+            return 'Triangulo sem área'

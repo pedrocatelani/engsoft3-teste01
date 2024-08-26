@@ -19,4 +19,6 @@ for test_case in test_list:
     check = tri.create_triangle(test_case[0],test_case[1],test_case[2])
     print(check)
     print(tri.triangle_type())
+    print(tri.perimeter())
+    print(tri.area())
     ctrl += 1
